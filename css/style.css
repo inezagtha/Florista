@@ -481,7 +481,7 @@ header .fa-bars{
         padding:2rem;
     }
     .home{
-        background-position: center; /* Diubah dari left ke center agar gambar tidak meleset */
+        background-position: center;
     }       
 }
 
@@ -510,20 +510,46 @@ header .fa-bars{
         display: block;
     }
 
-    /* ==================== DIBAWAH INI PERBAIKAN UTAMA MOBILE HOME ==================== */
+    /* ==================== FIX TAMPILAN MOBILE HOME USER INTERFACE ==================== */
     .home {
-        background-position: center !important;
-        background-size: cover !important; 
-        align-items: center;
-        padding: 2rem;
+        display: flex;
+        align-items: flex-end; /* Dorong konten teks ke bawah agar bunga di atas terlihat */
+        justify-content: center;
+        min-height: 100vh;
+        padding: 3rem 2rem;
+        padding-top: 10rem;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.7) 100%), 
+                    url("images/homes-bg.jpg") no-repeat;
+        background-size: cover !important;
+        background-position: calc(50% + 140px) center !important; /* Geser gambar tulip ke tengah layar HP */
     }
 
-    .home .content h3{
-        font-size: 4.5rem !important; /* Memperbaiki typo .content.h3 lama & mengecilkan teks */
+    .home .content {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.85); /* Box pelindung teks transparan */
+        padding: 2.5rem 2rem;
+        border-radius: 2rem;
+        backdrop-filter: blur(8px); /* Efek blur kaca iOS style */
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 40rem;
+        margin-bottom: 3rem;
     }
 
-    .home .content span{
-        font-size: 2.2rem !important; /* Mengecilkan sub-teks pink */
+    .home .content h3 {
+        font-size: 3.8rem !important; /* Pas di satu-dua baris HP */
+        line-height: 1.2;
+    }
+
+    .home .content span {
+        font-size: 1.8rem !important;
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .home .content p {
+        font-size: 1.3rem;
+        color: #444;
     }
 }
 
@@ -801,7 +827,7 @@ header .fa-bars{
     transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive Payment */
 @media (max-width: 768px) {
     .payment-container {
         grid-template-columns: 1fr;
