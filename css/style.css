@@ -107,13 +107,11 @@ header .fa-bars{
     display: none;
 }
 
-/* --- DESKTOP HOME SECTION --- */
 .home{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    /* Menggunakan dua jalur fallback: jika tanpa ../ gagal, dia pakai yang dengan ../ */
-    background: url("../images/homes-bg.jpg") no-repeat, url("images/homes-bg.jpg") no-repeat;
+    background: url("images/homes-bg.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -511,50 +509,6 @@ header .fa-bars{
         border:1rem solid rgba(0,0,0,.1);
         display: block;
     }
-
-    /* ==================== FIX TAMPILAN MOBILE HOME USER INTERFACE ==================== */
-    .home {
-        display: flex;
-        align-items: flex-end; 
-        justify-content: center;
-        min-height: 100vh;
-        padding: 3rem 2rem;
-        padding-top: 12rem;
-        /* Ditambahkan background-image fallback ganda khusus mobile agar gambar tidak hilang */
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.7) 100%), 
-                    url("../images/homes-bg.jpg") no-repeat, 
-                    url("images/homes-bg.jpg") no-repeat !important;
-        background-size: cover !important;
-        background-position: calc(50% + 140px) center !important; 
-    }
-
-    .home .content {
-        text-align: center;
-        background: rgba(255, 255, 255, 0.85); 
-        padding: 2.5rem 2rem;
-        border-radius: 2rem;
-        backdrop-filter: blur(8px); 
-        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
-        width: 100%;
-        max-width: 40rem;
-        margin-bottom: 3rem;
-    }
-
-    .home .content h3 {
-        font-size: 3.8rem !important; 
-        line-height: 1.2;
-    }
-
-    .home .content span {
-        font-size: 1.8rem !important;
-        display: block;
-        margin: 1rem 0;
-    }
-
-    .home .content p {
-        font-size: 1.3rem;
-        color: #444;
-    }
 }
 
 /* ==================== PAYMENT SECTION ==================== */
@@ -793,7 +747,6 @@ header .fa-bars{
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #333;
 }
 
 .btn-promo:hover {
