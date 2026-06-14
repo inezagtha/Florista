@@ -107,11 +107,13 @@ header .fa-bars{
     display: none;
 }
 
+/* --- DESKTOP HOME SECTION --- */
 .home{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url("images/homes-bg.jpg") no-repeat;
+    /* Menggunakan dua jalur fallback: jika tanpa ../ gagal, dia pakai yang dengan ../ */
+    background: url("../images/homes-bg.jpg") no-repeat, url("images/homes-bg.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -513,23 +515,25 @@ header .fa-bars{
     /* ==================== FIX TAMPILAN MOBILE HOME USER INTERFACE ==================== */
     .home {
         display: flex;
-        align-items: flex-end; /* Dorong konten teks ke bawah agar bunga di atas terlihat */
+        align-items: flex-end; 
         justify-content: center;
         min-height: 100vh;
         padding: 3rem 2rem;
-        padding-top: 10rem;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.7) 100%), 
-                    url("images/homes-bg.jpg") no-repeat;
+        padding-top: 12rem;
+        /* Ditambahkan background-image fallback ganda khusus mobile agar gambar tidak hilang */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.7) 100%), 
+                    url("../images/homes-bg.jpg") no-repeat, 
+                    url("images/homes-bg.jpg") no-repeat !important;
         background-size: cover !important;
-        background-position: calc(50% + 140px) center !important; /* Geser gambar tulip ke tengah layar HP */
+        background-position: calc(50% + 140px) center !important; 
     }
 
     .home .content {
         text-align: center;
-        background: rgba(255, 255, 255, 0.85); /* Box pelindung teks transparan */
+        background: rgba(255, 255, 255, 0.85); 
         padding: 2.5rem 2rem;
         border-radius: 2rem;
-        backdrop-filter: blur(8px); /* Efek blur kaca iOS style */
+        backdrop-filter: blur(8px); 
         box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
         width: 100%;
         max-width: 40rem;
@@ -537,7 +541,7 @@ header .fa-bars{
     }
 
     .home .content h3 {
-        font-size: 3.8rem !important; /* Pas di satu-dua baris HP */
+        font-size: 3.8rem !important; 
         line-height: 1.2;
     }
 
