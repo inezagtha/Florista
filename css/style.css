@@ -107,6 +107,7 @@ header .fa-bars{
     display: none;
 }
 
+/* ==================== HOME SECTION (DESKTOP) ==================== */
 .home{
     display: flex;
     align-items: center;
@@ -508,6 +509,59 @@ header .fa-bars{
         background:#fff;
         border:1rem solid rgba(0,0,0,.1);
         display: block;
+    }
+
+    /* ==================== PERBAIKAN MOBILE HOME USER INTERFACE UTUH ==================== */
+    .home {
+        display: flex;
+        align-items: flex-end; /* Membawa teks konten ke area bawah layar mobile */
+        justify-content: center;
+        min-height: 100vh;
+        padding: 3rem 2rem;
+        padding-top: 14rem; /* Jarak aman dari batas navbar header */
+        
+        /* Tetap pakai jalur image asli kamu agar tidak blank/hilang */
+        background: url("images/homes-bg.jpg") no-repeat !important;
+        background-size: cover !important;
+        
+        /* Menggeser fokus gambar bunga tulip agar pas di tengah-kanan layar HP */
+        background-position: calc(50% + 130px) center !important; 
+    }
+
+    .home .content {
+        text-align: center; /* Membuat teks rata tengah khas UI mobile modern */
+        background: rgba(255, 255, 255, 0.85); /* Kotak transparan pelindung tulisan */
+        padding: 3rem 2rem;
+        border-radius: 2.5rem; /* Lengkungan sudut halus estetik */
+        backdrop-filter: blur(10px); /* Efek blur kaca ala aplikasi premium/iOS */
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 42rem;
+        margin-bottom: 4rem;
+    }
+
+    .home .content h3 {
+        font-size: 3.5rem !important; /* Mengecilkan teks Fresh Bouquets agar pas */
+        line-height: 1.2;
+    }
+
+    .home .content span {
+        font-size: 1.8rem !important;
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .home .content p {
+        font-size: 1.3rem;
+        color: #444;
+        line-height: 1.6;
+    }
+    
+    .home .content .btn {
+        font-size: 1.5rem;
+        padding: 1rem 4rem;
+        width: 100%; /* Tombol memanjang penuh agar mudah di-klik jari */
     }
 }
 
