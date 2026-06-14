@@ -422,11 +422,12 @@ header .fa-bars{
 
 .footer .box-container{
     display: flex;
-
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .footer .box-container .box{
-    flex:1 1 25rem;
+    flex:1 1 22rem;
     align-items: flex-start;
     border: 1px;
 }
