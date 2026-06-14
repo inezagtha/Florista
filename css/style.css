@@ -110,9 +110,9 @@ header .fa-bars{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url("../images/homes-bg.jpg") no-repeat center center;
+    background: url("images/homes-bg.jpg") no-repeat; /* 1. Pastikan folder path sudah benar tanpa ../ jika sejajar */
     background-size: cover;
-    background-position: center center;
+    background-position: center;
 }
 
 .home .content{
@@ -120,12 +120,12 @@ header .fa-bars{
 }
 
 .home .content h3{
-    font-size: 8rem !important;
+    font-size: 4.5rem !important;
     color:#333
 }
 
 .home .content span{
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     color:var(--pink);
     padding:1rem 0;
     line-height: 1.5;
@@ -519,7 +519,7 @@ header .fa-bars{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    header #toggler:checked ~ .navbar{
+   header #toggler:checked ~ .navbar{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     header .navbar a{
