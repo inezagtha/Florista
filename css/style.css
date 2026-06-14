@@ -45,11 +45,12 @@ section{
     padding:.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
-
 }
+
 .btn:hover{
     background:var(--pink);
 }
+
 header{
     position: fixed;
     top:0; left:0; right:0;
@@ -74,7 +75,7 @@ header .logo span {
 
 header .navbar a{
     font-size: 2rem;
-    padding: 0 1.5rem; /* tambahkan jarak horizontal */
+    padding: 0 1.5rem;
     color:#666;
 }
 
@@ -110,7 +111,7 @@ header .fa-bars{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url("images/homes-bg.jpg") no-repeat; /* 1. Pastikan folder path sudah benar tanpa ../ jika sejajar */
+    background: url("images/homes-bg.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -120,15 +121,16 @@ header .fa-bars{
 }
 
 .home .content h3{
-    font-size: 4.5rem !important;
-    color:#333
+    font-size: 8rem;
+    color:#333;
 }
 
 .home .content span{
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     color:var(--pink);
     padding:1rem 0;
     line-height: 1.5;
+    display: inline-block;
 }
 
 .home .content p{
@@ -186,7 +188,7 @@ header .fa-bars{
     color:#999;
     padding: 5rem 0;
     padding-top: 1rem;
-    line-break: 1.5;
+    line-height: 1.5;
 }
 
 .icons-container{
@@ -223,7 +225,6 @@ header .fa-bars{
     color:#555;
     font-size: 1.3rem;
 }
-
 
 .products .box-container{
     display: flex;
@@ -392,7 +393,7 @@ header .fa-bars{
     border-radius: .5rem;
 }
 
-.contact .row image{
+.contact .row .image{
     flex:1 1 40rem;
 }
 
@@ -468,45 +469,23 @@ header .fa-bars{
     color:var(--pink);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media quaries */
+/* media queries */
 @media (max-width:991px) {
-
     html{
         font-size: 55%;
     }
-
     header{
         padding:2rem;
     }
-
     section{
         padding:2rem;
     }
-
     .home{
-        background-position: left;
-    }
-    
-        
+        background-position: center; /* Diubah dari left ke center agar gambar tidak meleset */
+    }       
 }
 
 @media (max-width:768px){
-
     header .fa-bars{
         display: block;
     }
@@ -519,9 +498,10 @@ header .fa-bars{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-   header #toggler:checked ~ .navbar{
+    header #toggler:checked ~ .navbar{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+
     header .navbar a{
         margin:1.5rem;
         padding:1.5rem;
@@ -530,13 +510,24 @@ header .fa-bars{
         display: block;
     }
 
-    .home .content.h3{
-        font-size: 2.5rem;
+    /* ==================== DIBAWAH INI PERBAIKAN UTAMA MOBILE HOME ==================== */
+    .home {
+        background-position: center !important;
+        background-size: cover !important; 
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem !important; /* Memperbaiki typo .content.h3 lama & mengecilkan teks */
+    }
+
+    .home .content span{
+        font-size: 2.2rem !important; /* Mengecilkan sub-teks pink */
     }
 }
 
 /* ==================== PAYMENT SECTION ==================== */
-
 .payment {
     padding: 50px 20px;
     background: #f9f9f9;
