@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[locale]\u002Fremove-object-from-video","\u002F[locale]\u002Fvideo-background-remover","\u002F[locale]\u002Fvideo-enhancer","\u002Fremove-object-from-video","\u002Fvideo-background-remover","\u002Fvideo-enhancer"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

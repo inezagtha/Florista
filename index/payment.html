@@ -1,0 +1,139 @@
+<!-- payment section starts -->
+
+<section class="payment" id="payment">
+
+    <h1 class="heading">Checkout & <span>Payment</span></h1>
+
+    <div class="payment-container">
+
+        <!-- Left Side - Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            
+            <div class="summary-items" id="summaryItems">
+                <p style="text-align: center; color: #999;">Keranjang kosong</p>
+            </div>
+
+            <div class="summary-total">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">Free</span>
+                </div>
+                <div class="total-row final">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Payment Form -->
+        <div class="payment-form">
+            <h2>Payment Details</h2>
+
+            <form id="paymentForm">
+                <!-- Customer Info -->
+                <div class="form-section">
+                    <h3>Shipping Address</h3>
+                    
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+
+                    <input type="text" placeholder="Street Address" required class="full-width">
+                    
+                    <div class="form-row">
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="State/Province" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Postal Code" required>
+                        <input type="text" placeholder="Country" required>
+                    </div>
+
+                    <input type="tel" placeholder="Phone Number" required class="full-width">
+                </div>
+
+                <!-- Payment Method -->
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+
+                    <div class="payment-methods">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span class="option-label">
+                                <i class="fas fa-credit-card"></i> Credit/Debit Card
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="paypal">
+                            <span class="option-label">
+                                <i class="fab fa-paypal"></i> PayPal
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="transfer">
+                            <span class="option-label">
+                                <i class="fas fa-bank"></i> Bank Transfer
+                            </span>
+                        </label>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="ewallet">
+                            <span class="option-label">
+                                <i class="fas fa-wallet"></i> E-Wallet
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Card Details (shown when card is selected) -->
+                <div class="form-section" id="cardSection">
+                    <h3>Card Details</h3>
+
+                    <input type="text" placeholder="Cardholder Name" required class="full-width">
+                    
+                    <input type="text" placeholder="Card Number (16 digits)" maxlength="16" required class="full-width">
+                    
+                    <div class="form-row">
+                        <input type="text" placeholder="MM/YY" maxlength="5" required>
+                        <input type="text" placeholder="CVV (3 digits)" maxlength="3" required>
+                    </div>
+                </div>
+
+                <!-- Promo Code -->
+                <div class="form-section">
+                    <h3>Promo Code</h3>
+                    <div class="form-row">
+                        <input type="text" placeholder="Enter promo code (optional)">
+                        <button type="button" class="btn-promo">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-section">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>I agree to the terms and conditions</span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-pay">
+                    <i class="fas fa-lock"></i> Complete Payment
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- payment section ends -->
